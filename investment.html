@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Investment Forum</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .navbar nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar nav ul li {
+      margin-left: 20px;
+    }
+
+    .navbar nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #e67e22;
+    }
+
+    /* Content */
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem;
+      gap: 20px;
+    }
+
+    .feature-box {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: calc(33% - 20px);
+      text-align: center;
+    }
+
+    .feature-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-box button {
+      padding: 0.7rem 1.2rem;
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .feature-box button:hover {
+      background: #e67e22;
+    }
+
+    /* Footer */
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .popup.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .popup-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .popup-content p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .close-btn {
+      padding: 0.7rem 1.5rem;
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: #e67e22;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .feature-box {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .feature-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">World Investment Forum</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#features">Recursos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section id="home">
+      <h1>Bem-vindo ao World Investment Forum</h1>
+      <p>Potencializando investimentos com soluções globais e seguras.</p>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature-box">
+        <h3>Calculadora de Investimentos</h3>
+        <p>Planeje seus investimentos e calcule seus retornos facilmente.</p>
+        <button>Experimente Agora</button>
+      </div>
+      <div class="feature-box">
+        <h3>Atualizações de Mercado</h3>
+        <p>Fique informado com as últimas tendências e notícias do mercado.</p>
+        <button>Ver Atualizações</button>
+      </div>
+      <div class="feature-box">
+        <h3>Transações Seguras</h3>
+        <p>Todos os investimentos são processados em USD com segurança.</p>
+        <button>Saiba Mais</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 World Investment Forum. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Aviso Importante</h2>
+      <p>
+        Devido a mudanças nos regulamentos de pagamentos internacionais, 
+        todos os investimentos agora devem ser processados em USD. 
+        Isso garante conformidade com os padrões financeiros internacionais.
+      </p>
+      <button id="closePopup" class="close-btn">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const popup = document.getElementById('popup');
+      const closePopup = document.getElementById('closePopup');
+
+      // Show popup after a delay
+      setTimeout(() => {
+        popup.classList.add('active');
+      }, 1000);
+
+      // Close popup on button click
+      closePopup.addEventListener('click', () => {
+        popup.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
